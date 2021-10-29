@@ -7,7 +7,7 @@ public class Solution {
         int n = scan.nextInt();
         scan.close();
       
-        //@amaneleven
+        //@AmanEleven
    
         String ans = "";
         if (n % 2 == 1) {

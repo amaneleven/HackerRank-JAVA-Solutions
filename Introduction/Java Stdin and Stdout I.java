@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         
+        // @AmanEleven
+        
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
@@ -19,5 +21,5 @@ public class Solution {
 
 
 
-//Author: AmanEleven
-//Follow: instagram.com/amaneleven
+//Author : AmanEleven
+//Follow : All Personal and Professional Links Here -->  https://linktr.ee/amaneleven

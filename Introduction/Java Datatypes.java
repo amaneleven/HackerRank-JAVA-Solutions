@@ -1,65 +1,38 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
+import java.util.Scanner;
 
+class Solution {
+    public static void main(String[] args) {
+        
+        
 //Author : AmanEleven
-//Follow : All Personal and Professional Links Here -->  https://linktr.ee/amaneleven
-
-public class Solution {
-
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String testCases = br.readLine();
-        int N = Integer.parseInt(testCases);
-        for (int i = 0; i < N; i++) {
-          
-            String line = br.readLine();
+//Follow : All Personal and Professional Links Here -->  https://linktr.ee/amaneleven       
+        
+        Scanner scan = new Scanner(System.in);
+        int t = scan.nextInt();
+        for (int i = 0; i < t; i++) {
             try {
-                long n = Long.parseLong(line);
-                if (n == 0 || n == 1) {
-                System.out.println(n + " can be fitted in:");
-                System.out.println("* boolean");
-                System.out.println("* byte");
-                System.out.println("* short");
-                System.out.println("* int");
-                System.out.println("* long");
-                continue;
-            } else if (n == (byte)n) {
-                System.out.println(n + " can be fitted in:");
-                System.out.println("* byte");
-                System.out.println("* short");
-                System.out.println("* int");
-                System.out.println("* long");
-                continue;
-            }
-              else if (n == (short)n) {
-                System.out.println(n + " can be fitted in:");
-                System.out.println("* short");
-                System.out.println("* int");
-                System.out.println("* long");
-                continue;
-            } else if (n == (int)n) {
-                System.out.println(n + " can be fitted in:");
-                System.out.println("* int");
-                System.out.println("* long");
-                continue;
-            } else {
-                System.out.println(n + " can be fitted in:");
-                System.out.println("* long");
-                continue;
-           }
-            } catch (NumberFormatException e)  {
-                System.out.println(line + " can't be fitted anywhere.");
-                continue;
-
+                long x = scan.nextLong();
+                System.out.println(x + " can be fitted in:");
+                if (x >= Byte.MIN_VALUE && x <= Byte.MAX_VALUE) {
+                    System.out.println("* byte");
+                }
+                if (x >= Short.MIN_VALUE && x <= Short.MAX_VALUE) {
+                    System.out.println("* short");
+                }
+                if (x >= Integer.MIN_VALUE && x <= Integer.MAX_VALUE) {
+                    System.out.println("* int");
+                }
+                if (x >= Long.MIN_VALUE && x <= Long.MAX_VALUE) {
+                    System.out.println("* long");
+                }
+            } catch (Exception e) {
+                System.out.println(scan.next() + " can't be fitted anywhere.");
             }
         }
+        scan.close();
     }
 }
-                  
 
 
 //Author : AmanEleven
